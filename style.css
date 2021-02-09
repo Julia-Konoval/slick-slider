@@ -1,0 +1,31 @@
+.slider-for {
+  display: flex;
+  flex-direction: row;
+}
+.slider-for img {
+  width: 400px;
+  padding: 29px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slide-wrapper {
+  width: 84%;
+  overflow: hidden;
+  
+}
+.slider-nav-thumbnails {
+  display: flex;
+  flex-direction: row;
+}
+.slider-nav-thumbnails img {
+  width: 100px;
+  padding: 10px;
+}
+.slide-container {
+  display: flex;
+  flex-direction: row;
+}

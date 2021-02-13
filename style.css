@@ -22,9 +22,8 @@ body {
 h2,
 h4 {
   color: black;
-
 }
-.years{
+.years {
   font-size: 4px;
 }
 .slide-wrapper {
@@ -178,6 +177,88 @@ h2 {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.pagingInfo{
+.pagingInfo {
   padding-right: 50px;
+}
+
+/* Media query  */
+@media only screen and (max-width: 400px) {
+  body {
+    display: flex;
+    justify-content: center !important;
+  }
+  .main-text {
+    width: 100% !important;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .slider-for {
+    padding-left: 10px;
+    width: 57%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .slick-list {
+      width: 100vw;
+    }
+    .slick-center img {
+      margin-left: 30px;
+    }
+
+    .slider-for img {
+      display: none;
+    }
+
+    .thumbnail-description p {
+      display: none;
+    }
+
+    .main-text p {
+      width: 100%;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-wrapper {
+      justify-content: left;
+    }
+
+    .slider-nav-thumbnails {
+      margin-bottom: 20px;
+    }
+    .slider-nav-thumbnails img {
+      height: 160px;
+      width: 60vw;
+    }
+    .video-carousel--thumbnail:after {
+      content: "";
+      /* size of your margin */
+      border-bottom: 2px solid;
+      position: absolute;
+      top: 50%;
+    }
+    :after {
+      left: 100%;
+    }
+    :before {
+      right: 100%;
+    }
+  }
+  }
+  @media only screen and (max-width: 1000px) {
+   
+  .slide-wrapper {
+    padding-right: 100px;
+  }
+  .slider-for img {
+    height: 100px;
+    width: 40%;
+  }
+
+  .main-text {
+    width: 60%;
+  }
 }

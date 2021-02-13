@@ -13,12 +13,12 @@ $(document).ready(function () {
     function (event, slick, currentSlide, nextSlide) {
       //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
       let i = (currentSlide ? currentSlide : 0) + 1;
-      // if (i >= 4) {
-      //   $slickNext.css("display", "none");
-      // }
-      // if (i < 1) {
-      //   $slickPrev.css("display", "none");
-      // }
+      if (i >= 4) {
+        $status.text(" ");
+      }
+      if (i < 1) {
+        $status.text(" ");
+      }
       $status.text(i + " - " + slick.slideCount);
     }
   );
@@ -32,7 +32,7 @@ $(document).ready(function () {
     infinite: false,
     variableWidth: true,
     onAfterChange: function (slide, index) {
-      if (index === 4) {
+      if (index === 3) {
         $(".slick-next").css("pointer-events", "none");
       } else {
         $(".slick-next").css("pointer-events", "all");
@@ -46,12 +46,5 @@ $(document).ready(function () {
     // autoplay: true,
     autoplaySpeed: 6000,
     arrows: false,
-    customPaging: function (slider, i) {
-      //FYI just have a look at the object to find available information
-      //press f12 to access the console in most browsers
-      //you could also debug or look in the source
-      console.log(slider);
-      return i + 1 + "/" + slider.slideCount;
-    },
   });
 });
